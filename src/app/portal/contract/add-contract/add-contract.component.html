@@ -1,0 +1,160 @@
+<mat-accordion color="#7C7C7C">
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title  style="color: #7C7C7C;">
+          Create New Contract
+        </mat-panel-title>
+       
+      </mat-expansion-panel-header>
+      <mat-stepper #stepper>
+        <mat-step [stepControl]="firstFormGroup" errorMessage="Name is required.">
+          <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Contract</ng-template>
+            <mat-toolbar color="#E4E4E4" style="height: 20px!important;     min-height: 37px;">
+              <mat-toolbar-row>
+                <p>Parent Group</p>
+              </mat-toolbar-row>
+            </mat-toolbar>
+            <br>
+            <div class="example-container">
+              <mat-form-field appearance="fill" class="example-full-width"  >
+                <mat-label>Contract No</mat-label>
+                <input matInput  type="number">
+              </mat-form-field>
+      
+              <mat-form-field appearance="fill" class="example-full-width">
+                <mat-label>Parent Group</mat-label>
+                <mat-select>
+                  <mat-option value="option">Option</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field appearance="fill" class="example-full-width">
+                <mat-label>Linked Parent Group</mat-label>
+                <mat-select>
+                  <mat-option value="option">Option</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field appearance="fill" class="example-full-width">
+                <mat-label>Parent Group Name</mat-label>
+                <input matInput  type="text">
+              </mat-form-field>
+              <mat-form-field appearance="fill" class="example-full-width">
+                <mat-label>
+                  Division Range</mat-label>
+                  <input matInput  type="text">
+              </mat-form-field>
+            </div>
+            <div class="example-container">
+              <div class="example-container">
+                <div>
+                  <label>ICHP Contract </label>
+                  <mat-radio-group [formControl]="floatLabelControl">
+                    <mat-radio-button color="primary" value="yes">Yes</mat-radio-button>
+                    <mat-radio-button color="primary" value="auto">No</mat-radio-button>
+                  </mat-radio-group>
+                </div>
+
+                <div>
+                  <label>Include in Stoploss Tracking</label>
+                  <mat-radio-group [formControl]="floatLabelControl">
+                    <mat-radio-button color="primary" value="auto">Yes</mat-radio-button>
+                    <mat-radio-button color="primary" value="no">No</mat-radio-button>
+                  </mat-radio-group>
+                </div>
+                <mat-toolbar color="#E4E4E4" style="height: 20px!important;     min-height: 37px;">
+                  <mat-toolbar-row>
+                    <label style="align-items: center;">Parent Group</label>
+                  </mat-toolbar-row>
+                </mat-toolbar>
+             <button mat-raised-button extended matStepperNext style="float: right;margin-right: 95px; background-color: #3365B0;color: #FFFFFF;" >
+                  <mat-icon>next</mat-icon>
+                 Next
+                </button>
+              </div>
+            </div>
+           
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup" errorMessage="Address is required.">
+          <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Agregate</ng-template>
+            <mat-form-field appearance="fill">
+              <mat-label>Agregate</mat-label>
+              <input matInput placeholder="Ex. 1 Main St, New York, NY" formControlName="secondCtrl"
+                     required>
+            </mat-form-field>
+            <div>
+              <p>Go to a different step to see the error state</p>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Specific</ng-template>
+          <p>You are now done.</p>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+          </div>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Run In</ng-template>
+          <p>You are now done.</p>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+          </div>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Exclusions</ng-template>
+          <p>You are now done.</p>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+          </div>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Contacts</ng-template>
+          <p>You are now done.</p>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+          </div>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Internal</ng-template>
+          <p>You are now done.</p>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+          </div>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Discount</ng-template>
+          <p>You are now done.</p>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+          </div>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Retention Factor</ng-template>
+          <p>You are now done.</p>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+          </div>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Audit</ng-template>
+          <p>You are now done.</p>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+          </div>
+        </mat-step>
+      </mat-stepper>
+    </mat-expansion-panel>
+  </mat-accordion>

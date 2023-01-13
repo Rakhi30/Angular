@@ -1,20 +1,4 @@
-.example-icon {
-    padding: 0 14px;
-  }
-  
-  .example-spacer {
-    flex: 1 1 auto;
-  }
-
-  .company{
-    border-radius: 50%;
-    height:38px;
-    width:38px;
-    float: left;
-    padding:5px;
-  }
-
-  .mat-mdc-form-field + .mat-mdc-form-field {
+.mat-mdc-form-field + .mat-mdc-form-field {
     margin-left: 8px;
   }
 
@@ -33,6 +17,4 @@
     align-items: center;
     height: 60px;
   }
-  
-
   

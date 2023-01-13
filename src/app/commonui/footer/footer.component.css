@@ -1,0 +1,17 @@
+.footer {
+    position: absolute;
+    bottom: 0px;
+    }
+
+    .example-spacer {
+        flex: 1 1 auto;
+       
+      }
+      .example-icon{
+        transform: scale(0.7);
+      }
+
+      .ctbrand{
+        font-size: x-small;
+        margin-top: 12px;
+      }
